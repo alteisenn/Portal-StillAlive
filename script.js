@@ -476,7 +476,7 @@ let personnels = [
     { "fast": "IN THIS" },
     { "fast": "ENRICHMENT CENTER ACTIVITY!!" },
     { "break": "" },
-    { "break": "Made By Alteisen" },
+    { "normal": "Made By Alteisen n_" },
     { "break": "" },
     { "break": "" },
     { "break": "" },
