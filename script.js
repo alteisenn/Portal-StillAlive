@@ -476,13 +476,13 @@ let personnels = [
     { "fast": "IN THIS" },
     { "fast": "ENRICHMENT CENTER ACTIVITY!!" },
     { "break": "" },
-    { "break": "" },
-    { "break": "" },
-    { "break": "" },
-    { "break": "" },
-    { "break": "" },
-    { "break": "" },
     { "break": "Made By Alteisen" },
+    { "break": "" },
+    { "break": "" },
+    { "break": "" },
+    { "break": "" },
+    { "break": "" },
+    { "break": "" },
 ];
 
 let k = 0;
