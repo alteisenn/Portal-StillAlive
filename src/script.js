@@ -557,7 +557,7 @@ function blinkingCursor() {
 }
 var audio
 $(document).ready(function () {
-    audio = new Audio('still_alive.mp3');
+    audio = new Audio('src/still_alive.mp3');
 });
 function playMusic() {
     audio.volume = 0.5;
