@@ -11,6 +11,7 @@
     <title>Still Alive</title>
   </head>
    <script>
+
     function play() {
       $(".welcome").hide();
       playMusic();
@@ -20,13 +21,15 @@
         personnelTypeWriter();
       }, 1000);
     }
+
+    play()
   </script> 
   <body>
-  
+    <body onload="javascript:play()">
 
     <div class="welcome">
-      >Press Enter
-      <script>document.addEventListener('keydown', play)</script>
+      
+   
 
     </div> 
 
