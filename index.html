@@ -10,7 +10,7 @@
     <script src="./src/script.js"></script>
     <title>Still Alive</title>
   </head>
-   <script>
+  <script>
  let audioInitialized = false;
 
 function play() {
@@ -38,20 +38,16 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-// Simula la pulsación de la tecla "Enter" después de 2 segundos
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    const enterEvent = new KeyboardEvent("keydown", { key: "Enter" });
-    document.dispatchEvent(enterEvent);
-  }, 1); // 2000 ms = 2 segundos
-});
-
-
   </script> 
-  <body>
 
+
+  <body>
+  
+    
     <div class="welcome">
-      
+      <div class="message-box">
+        <p>>press enter</p>
+      </div>
    
 
     </div> 
