@@ -11,30 +11,40 @@
     <title>Still Alive</title>
   </head>
    <script>
+ let audioInitialized = false;
 
-    function play() {
-      $(".welcome").hide();
-      playMusic();
-      setTimeout(() => {
-        blinkingCursor();
-        typeWriter();
-        personnelTypeWriter();
-      }, 1000);
-    }
+function play() {
+  $(".welcome").hide();
+  playMusic();
+  setTimeout(() => {
+    blinkingCursor();
+    typeWriter();
+    personnelTypeWriter();
+  }, 1000);
+}
 
-  document.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-          play();
-        }
-      });
+function initializeAudio() {
+  if (!audioInitialized) {
+    playMusic(); // Reproduce la música
+    audioInitialized = true; // Marca el audio como inicializado
+  }
+}
 
-      document.addEventListener("DOMContentLoaded", () => {
-        // Retraso de 1 segundos antes de simular la tecla "Enter"
-        setTimeout(() => {
-          const enterEvent = new KeyboardEvent("keydown", { key: "Enter" });
-          document.dispatchEvent(enterEvent);
-        }, 1000); // 
-      });
+// Detecta la tecla "Enter" y ejecuta play()
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    initializeAudio(); // Asegura que el audio se inicialice
+    play();
+  }
+});
+
+// Simula la pulsación de la tecla "Enter" después de 2 segundos
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const enterEvent = new KeyboardEvent("keydown", { key: "Enter" });
+    document.dispatchEvent(enterEvent);
+  }, 1); // 2000 ms = 2 segundos
+});
 
 
   </script> 
