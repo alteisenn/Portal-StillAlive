@@ -22,7 +22,19 @@
       }, 1000);
     }
 
- window.addEventListener('load', () => play());
+  document.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          play();
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Retraso de 1 segundos antes de simular la tecla "Enter"
+        setTimeout(() => {
+          const enterEvent = new KeyboardEvent("keydown", { key: "Enter" });
+          document.dispatchEvent(enterEvent);
+        }, 1000); // 
+      });
 
 
   </script> 
